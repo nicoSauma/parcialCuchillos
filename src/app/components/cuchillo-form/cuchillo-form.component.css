@@ -1,0 +1,74 @@
+/* Contenedor principal del formulario */
+form {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Tres columnas: etiquetas, inputs, errores */
+    gap: 16px; /* Espaciado entre columnas */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    margin: 0 auto; /* Centrado horizontal */
+    max-width: 1200px; /* Máximo ancho del formulario */
+  }
+  
+  /* Estilo general para etiquetas */
+  form label {
+    font-weight: bold;
+    text-align: right; /* Alinear etiquetas a la derecha */
+    padding-right: 10px; /* Espaciado entre etiqueta y input */
+  }
+  
+  /* Estilo para los inputs y selects */
+  form input,
+  form select {
+    width: 100%; /* Ocupa todo el espacio de su columna */
+    padding: 8px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 1rem;
+    box-sizing: border-box; /* Asegura que padding no expanda el ancho total */
+  }
+  
+  /* Botón de envío */
+  form button {
+    grid-column: 2 / 3; /* Centra el botón bajo la columna de inputs */
+    padding: 10px 20px;
+    background-color: #4caf50; /* Color verde */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  form button:disabled {
+    background-color: #ccc; /* Botón deshabilitado en gris */
+    cursor: not-allowed;
+  }
+  
+  /* Mensajes de error */
+  form div.error {
+    color: red;
+    font-size: 0.9rem;
+    line-height: 1.2;
+  }
+  
+  /* Espaciado entre filas */
+  form div {
+    margin-bottom: 12px;
+  }
+  
+  /* Diseño responsivo */
+  @media (max-width: 768px) {
+    form {
+      grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+  
+    form label {
+      text-align: left; /* Alinear etiquetas a la izquierda */
+      padding-right: 0;
+      margin-bottom: 4px;
+    }
+  
+    form button {
+      grid-column: 1 / 2; /* Ocupa toda la fila en pantallas pequeñas */
+    }
+  }
+  

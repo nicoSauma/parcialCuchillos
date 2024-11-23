@@ -1,0 +1,68 @@
+/* Contenedor del cuchillo */
+.knife-item {
+    display: flex; /* Elementos en una sola línea */
+    align-items: center; /* Alineación vertical centrada */
+    justify-content: space-between; /* Espaciado uniforme entre elementos */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espaciado entre filas */
+    background-color: #f9f9f9; /* Fondo claro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
+  
+  /* Estilo para los textos */
+  .knife-name,
+  .knife-type,
+  .knife-length {
+    margin: 0; /* Elimina márgenes extra */
+    flex: 1; /* Cada texto ocupa espacio equitativo */
+    font-size: 1rem; /* Tamaño uniforme */
+  }
+  
+  .knife-name {
+    font-weight: bold; /* Resalta el nombre */
+  }
+  
+  /* Botones */
+  .delete-button,
+  .details-button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Botón "Eliminar" */
+  .delete-button {
+    background-color: #dc3545; /* Rojo */
+  }
+  
+  .delete-button:hover {
+    background-color: #a71d2a; /* Rojo más oscuro */
+  }
+  
+  /* Botón "Ver detalles" */
+  .details-button {
+    background-color: #007bff; /* Azul */
+  }
+  
+  .details-button:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+  }
+  
+  /* Diseño responsivo */
+  @media (max-width: 768px) {
+    .knife-item {
+      flex-direction: column; /* Cambia a diseño vertical en pantallas pequeñas */
+      align-items: flex-start; /* Alinea textos al inicio */
+    }
+  
+    .delete-button,
+    .details-button {
+      margin: 5px 0; /* Espaciado entre botones en diseño vertical */
+    }
+  }
